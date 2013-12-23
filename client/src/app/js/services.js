@@ -1,6 +1,6 @@
 'use strict';
 
-var httpRoot = 'http://localhost\\:3003';
+var httpRoot = 'http://api.vollov.ca';
 
 /**
  * Blog data service, with list function as public API.

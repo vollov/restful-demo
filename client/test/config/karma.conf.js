@@ -4,14 +4,12 @@ module.exports = function(config) {
 	config.set({
 		basePath : '../..',
 
-		files : [ 'vendor/jquery/jquery.min.js',
-				'vendor/angular/angular.min.js',
-				'vendor/angular/angular-resource.min.js',
-				'vendor/angular/angular-cookies.min.js',
-				'vendor/angular/angular-mocks.js', 
-				'src/app/js/**/*.js',
-				'test/unit/controllers/blogSpec.js',
-		],
+		files : [ 'src/app/lib/jquery/jquery-1.10.2.js',
+				'src/app/lib/angular/angular.js',
+				'src/app/lib/angular/angular-*.js',
+				'src/app/lib/underscore/underscore.min.js',
+				'vendor/angular/angular-mocks.js', 'src/app/js/**/*.js',
+				'test/unit/controllers/blogSpec.js', ],
 
 		autoWatch : true,
 		frameworks : [ 'jasmine' ],

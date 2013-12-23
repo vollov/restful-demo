@@ -1,6 +1,6 @@
 'use strict';
 
-var clientApp = angular.module('appModule', ['ngResource', 'ngCookies', 'clientServices', 'clientControllers' ]);
+var clientApp = angular.module('appModule', [ 'ngRoute','ngResource', 'ngCookies']);
 
 clientApp.config(function($routeProvider, $locationProvider) {
 	

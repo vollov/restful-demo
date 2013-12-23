@@ -2,10 +2,22 @@
 
 var mongojs = require('mongojs')
 	, _und = require('underscore')
-	, db = mongojs('dustin:Fgbhu89o@ds039487.mongolab.com:39487/nblog');
+	, ObjectID = require('mongodb').ObjectID
+	, db = mongojs('localhost/nblog');
+	//, db = mongojs('dustin:Fgbhu89o@ds039487.mongolab.com:39487/nblog');
 
 module.exports = {
 	
+	filterId : function(collections) {
+		return _und.map(collections, function(item,key){
+			item['oid'] = item['_id'];
+			delete item['_id'];
+			return item;
+		});
+	},
+	objectId : function(id) {
+		return new ObjectID(id);
+	},
 	/**
 	 * quest = {query:{},projection:{},sort:{},limit: 100 }
 	 */

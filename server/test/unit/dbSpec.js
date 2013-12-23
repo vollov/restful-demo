@@ -17,4 +17,16 @@ describe('Test mongojs wrapper -- db module', function() {
 			});
 		});
 	});
+	
+	describe('Test findOne function', function() {
+		it('should be able to find blog by id', function(done) {
+			db.findOne('blog', {_id: db.objectId('52b0a073e739b6084eaf047c')}, {'title':1}, function(err, blog) {
+				should.not.exist(err);
+				should.exist(blog);
+				//
+				//blog.should.have.property();
+				done();
+			});
+		});
+	});
 });

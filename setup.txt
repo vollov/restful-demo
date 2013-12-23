@@ -1,0 +1,10 @@
+[1] packages
+npm install -g grunt-init
+npm install -g grunt-cli
+
+[2] files
+build	build scripts
+dist	build output
+vendor	third party code
+src	source code
+test	test files

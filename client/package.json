@@ -1,0 +1,25 @@
+{
+	"name": "restful-client",
+	"description": "NodeJS demo for RESTful client",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "supervisor src/server.js",
+		"test": "karma start test/config/karma.conf.js $*"
+	},
+	"dependencies": {
+		"express": "*",
+		"multiparty": "*"
+	},
+	"devDependencies": {
+		"karma-junit-reporter" : "*",    
+		"karma-jasmine" : "*",
+		"karma-ng-scenario" : "*",
+		"karma-coverage": "*",
+		"supertest": "0.3.x",
+		"should": ">= 0.0.1",
+		"grunt": "~0.4.2",
+		"grunt-contrib-jshint": "~0.6.3",
+		"grunt-contrib-uglify": "*"
+	}
+}

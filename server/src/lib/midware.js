@@ -9,5 +9,9 @@ module.exports = {
 		res.header('Access-Control-Allow-Headers', 'Content-Type, X-Requested-With');
 		res.header('Access-Control-Allow-Methods', 'GET, POST, HEAD, OPTIONS');
 		next();
+	},
+	authentication: function(req, res, next) {
+		console.log('req.params=%j', req.params);
+		next();
 	}
 };

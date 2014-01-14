@@ -23,6 +23,7 @@ app.configure('production', function(){
 });
 
 app.all('*', midware.header);
+app.all('/api/*', midware.authentication);
 //API
 require('./api/blog')(app);
 

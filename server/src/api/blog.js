@@ -13,8 +13,8 @@ module.exports = function(app) {
 		var sort = [['date', -1]];		
 		db.find('blog',{sort:sort,limit:20}, function(err, blogs) {
 			if (!err) {
-				var result = db.filterId(blogs);
-				return res.send(result);
+				//var result = db.filterId(blogs);
+				return res.send(blogs);
 			} else {
 				return console.log(err);
 			}
@@ -24,8 +24,8 @@ module.exports = function(app) {
 	/**
 	 * Spec 1.2 get the blog by object id with GET
 	 */
-	app.get('/api/blog/:oid', function(req, res){
-		var id = req.params.oid;
+	app.get('/api/blog/:id', function(req, res){
+		var id = req.params.id;
 		db.findOne('blog', {'_id': mongojs.ObjectId(id)}, {}, function(err, blog){
 			if (!err) {
 				return res.send(blog);
